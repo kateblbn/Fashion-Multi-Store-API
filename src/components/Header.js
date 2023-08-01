@@ -1,10 +1,10 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import header from '../css/header.module.css'
+import { ContextCategories } from '../context/ContextApi'
 
-function Template({ id }) {
-    console.log(id);
+export function Template({ id }) {
     return (
         <div className={header.category__items}>
             {/* <a className='category__item' href='/'>{categ}</a> */}
@@ -14,9 +14,9 @@ function Template({ id }) {
 }
 
 function Header() {
+// const {data} = useContext(ContextCategories)
 
     const [data, setData] = useState([]);
-    console.log(data);
     useEffect(() => {
         try {
             const getDataCategory = async () => {
@@ -34,21 +34,22 @@ function Header() {
     return (
         <div>
             <div className={header.container}>
-                <div className={header.nav__menu}>
+                {/* <div className={header.nav__menu}>
                     <div className={header.nav}>
                         <Link className={header.home} to={'/'}>Home</Link>
                         <div className='bucket'>
                             <a href='/'>
-                                <img src='../img/Card.png' alt='shopping Card' />
+                                <img src='../img/bkt.png' alt='shopping Card' />
                             </a>
                         </div>
                     </div>
                     <div className={header.category}>{getCategories}</div>
-                </div>
+                </div> */}
                 <div className={header.background}>
-                    <h1>NEW COLLECTION</h1>
-                    <p>We know how large objects will act, but things on a
-                        small scale just do not act that way.</p>
+                    <h1 className={header.title}>NEW COLLECTION</h1>
+                    <p className={header.descr}>
+                    Shop what you love—faster and easier.
+                    </p>
                 </div>
             </div>
         </div>

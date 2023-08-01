@@ -18,5 +18,9 @@ a {
   color: black;
 }
 img {
-  width: 150px;
+  width: 250px;
+}
+p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
 }

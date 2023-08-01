@@ -1,15 +1,15 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
+import net from '../css/netside.module.css'
 function TemplateNetSide({ img, price, title, rating }) {
     return (
-        <div>
-            <p>{title}</p>
-            <img src={img} alt='img' />
-            <p>{rating}</p>
-            <p>{price}</p>
-            <button>ADD</button>
+        <div className={net.wrap}>
+            <p className={net.title}>{title}</p>
+            <img className={net.img} src={img} alt='img' />
+            <p className={net.rating} >{rating}</p>
+            <p className={net.price} >{price}$</p>
+            <button className={net.btn}>ADD</button>
         </div>
     )
 }
@@ -35,7 +35,7 @@ function NetSide() {
     })
     console.log(categoryItems);
     return (
-        <div>{categoryItems}</div>
+        <div className={net.wrapper}>{categoryItems}</div>
     )
 }
 
