@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={ <Header/>} />
-        <Route path="/category" element={ <NetSide/> } />
+        <Route path="/category/:id" element={ <NetSide/> } />
       </Routes>
     </BrowserRouter>
   );

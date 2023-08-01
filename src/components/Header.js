@@ -2,11 +2,13 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import header from '../css/header.module.css'
-function Template({ categ }) {
+
+function Template({ id }) {
+    console.log(id);
     return (
         <div className={header.category__items}>
             {/* <a className='category__item' href='/'>{categ}</a> */}
-            <Link to={'/category'}>{categ}</Link>
+            <Link to={`/category/${id}`}>{id}</Link>
         </div>
     )
 }
@@ -27,9 +29,8 @@ function Header() {
         }
     }, [])
     const getCategories = data.map((el, i) => {
-        return <Template categ={el} />
+        return <Template id={el} />
     })
-    console.log(getCategories);
     return (
         <div>
             <div className={header.container}>
