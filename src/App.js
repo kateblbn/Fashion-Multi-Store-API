@@ -1,3 +1,4 @@
+import React from "react"
 import {
   BrowserRouter,
   Routes,
@@ -6,19 +7,22 @@ import {
 } from "react-router-dom";
 import Header from "./components/Header";
 import NetSide from "./components/NetSide";
-import Nav from "./components/Nav";
-import ShopCard from "./components/ShopCard";
+import ShopCard from "./pages/ShopCard";
+import Home from "./pages/Home";
+import ContextApi, { ContextCategories } from "./api/ContextApi";
 
 
 function App() {
   return (
     <BrowserRouter>
-    <Nav/>
+    <ContextApi>
+    <Header/>
       <Routes>
-        <Route path="/" element={ <Header/>} />
-        <Route path="/category/:id" element={ <NetSide/> } />
+        <Route path="/" element={ <Home/>} />
+        <Route path="/category/:category" element={ <NetSide/> } />
         <Route path="/shopping-card" element={<ShopCard/> } />
       </Routes>
+      </ContextApi>
     </BrowserRouter>
   );
 }

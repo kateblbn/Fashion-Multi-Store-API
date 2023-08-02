@@ -1,15 +1,18 @@
 .home {
     font-size: 22px;
     color: rgb(94, 93, 93);
+
     &:hover {
         border-top: 1px solid rgb(90, 89, 89);
     }
 }
+
 .nav__menu {
     width: 90%;
     margin: 0 auto;
     padding-bottom: 25px;
 }
+
 .background {
     width: 100%;
     min-height: 100vh;
@@ -18,36 +21,47 @@
     background-size: cover;
     background-position: center;
 }
+
 .container {
     width: 100%;
     margin: 0 auto;
 }
+
 .nav {
-    display: flex; 
+    display: flex;
     height: 60px;
     align-items: center;
 }
+
 .category {
     display: flex;
     justify-content: center;
     height: 20px;
     align-items: center;
 }
+
 .category__items {
     margin-right: 15px;
     font-size: 22px;
+
     &:hover {
         border-top: 1px solid rgb(90, 89, 89);
     }
 }
+
 .title {
     display: flex;
     justify-content: center;
     padding: 40px 0;
 }
+
 .descr {
     width: 500px;
     display: flex;
     justify-content: center;
     font-size: 25px;
+}
+
+.bucket {
+    width: 40px;
 }
