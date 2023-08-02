@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import net from '../css/netside.module.css'
 import { ContextCategories } from '../api/ContextApi'
+
 function TemplateNetSide({ id, img, price, title, rating }) {
-    localStorage.setItem('id', id)
 
     return (
         <div className={net.wrap}>
@@ -11,7 +11,12 @@ function TemplateNetSide({ id, img, price, title, rating }) {
             <img className={net.img} src={img} alt='img' />
             <p className={net.rating} >{rating}</p>
             <p className={net.price} >{price}$</p>
-            <button onClick={() => localStorage.setItem('id', id)} className={net.btn}>ADD</button>
+            <button onClick={() => {
+                localStorage.setItem('id', id);
+                const getId = localStorage.getItem('id')
+                console.log(getId);
+            } 
+        } className={net.btn}>ADD</button>
         </div>
     )
 }
