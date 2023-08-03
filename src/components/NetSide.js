@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { json, useParams } from 'react-router-dom'
 import net from '../css/netside.module.css'
 import { ContextCategories } from '../api/ContextApi'
 
@@ -13,8 +13,15 @@ function TemplateNetSide({ id, img, price, title, rating }) {
             <p className={net.price} >{price}$</p>
             <button onClick={() => {
                 localStorage.setItem('id', id);
-                const getId = localStorage.getItem('id')
-                console.log(getId);
+                const item = {
+                    'title': {title},
+                    'img': {img},
+                    'rating': {rating},
+                    'price': {price}
+                }
+                localStorage.setItem('item', JSON.stringify(item))
+                const getItem = JSON.parse( localStorage.getItem('item') )
+                console.log(getItem);
             } 
         } className={net.btn}>ADD</button>
         </div>
