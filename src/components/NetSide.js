@@ -1,10 +1,9 @@
-import React, { useContext } from 'react'
-import { json, useParams } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import net from '../css/netside.module.css'
 import { ContextCategories } from '../api/ContextApi'
 
-function TemplateNetSide({ id, img, price, title, rating }) {
-
+export function TemplateNetSide({ id, img, price, title, rating }) {
     return (
         <div className={net.wrap}>
             <p className={net.title}>{title}</p>
@@ -20,8 +19,8 @@ function TemplateNetSide({ id, img, price, title, rating }) {
                     'price': {price}
                 }
                 localStorage.setItem('item', JSON.stringify(item))
-                const getItem = JSON.parse( localStorage.getItem('item') )
-                console.log(getItem);
+            //     const getItem = JSON.parse( localStorage.getItem('item') )
+            //    console.log(getItem);
             } 
         } className={net.btn}>ADD</button>
         </div>
@@ -32,6 +31,7 @@ function NetSide() {
     const { products } = useContext(ContextCategories)
     console.log(products);
     const filterCateg = products.filter((el) => el.category === category)
+    console.log(filterCateg);
     const categoryItems = filterCateg.map((e, i) => {
         return <TemplateNetSide key={i} img={e.image} price={e.price} title={e.title} rating={e.rating.rate} id={e.id} />
     })

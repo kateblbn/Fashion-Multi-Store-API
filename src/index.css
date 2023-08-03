@@ -16,6 +16,8 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: black;
+  font-size: 31px;
+  font-weight: 400;
 }
 
 img {

@@ -52,16 +52,20 @@
 .title {
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    padding: 40px 0 70px 0;
+    font-size: 60px;
+    text-shadow: 2px 2px grey;
 }
 
 .descr {
     width: 500px;
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
+    font-size: 50px;
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: 4px 4px grey;
 }
 
 .bucket {
     width: 40px;
+    margin-left: 10px;
 }
