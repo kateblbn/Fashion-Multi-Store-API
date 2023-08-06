@@ -1,8 +1,26 @@
 import React, { useState } from 'react'
 import net from '../css/netside.module.css'
 
-function TemplateCard({ id, img, price, title, rating }) {
-  const [count, setCount] = useState(1)
+function TemplateCard({ id, title, img, rating, price, quantity }) {
+  const getProducts = JSON.parse(localStorage.getItem('item'))
+  const [count, setCount] = useState(getProducts)
+  console.log(quantity);
+  const updateQty = () => {
+    // setCount(
+     const mapCount = 
+     count.map( (el, i) => {
+      if ( el.id === id) {
+       el.quantity++;
+      } 
+        return el
+    }
+    ) 
+    // ) 
+  
+  console.log(mapCount);
+    // localStorage.setItem('item', JSON.stringify(count));
+  }
+  
   return (
     <div>
       <div className={net.wrap}>
@@ -11,16 +29,10 @@ function TemplateCard({ id, img, price, title, rating }) {
         <p className={net.rating} >{rating}</p>
         <p className={net.price} >{price}$</p>
         <div>
-          <span>{count}</span>
+          <span>{quantity}</span>
           <div>
-            <button onClick={() => setCount(count + 1)}>+</button>
-            <button onClick={() => {
-              if (count > 1)
-                setCount(count - 1)
-              // else {
-              //   localStorage.removeItem('item')
-              // }
-            }}>-</button>
+            <button onClick={updateQty()}>+</button>
+            <button onClick={updateQty()}>-</button>
 
           </div>
         </div>
@@ -34,12 +46,9 @@ function TemplateCard({ id, img, price, title, rating }) {
 }
 
 function ShopCard() {
-  const get = JSON.parse(localStorage.getItem('item',))
-  const getArr = Object.values(get)
-  console.log(getArr);
-  // const filtredData = getArr.filter( el = )
-  const getSavedData = getArr.map((el, i) => {
-    return <TemplateCard id={el.id} key={i} title={el.title} img={el.img} price={el.price} rating={el.rating} />
+  const get = JSON.parse(localStorage.getItem('item'))
+  const getSavedData = get.map((el, i) => {
+    return <TemplateCard key={i} title={el.title} img={el.img} price={el.price} rating={el.rating} quantity={el.quantity} id={el.id}/>
   })
   // console.log(getSavedData);
   return (
