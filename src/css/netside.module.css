@@ -5,9 +5,11 @@
 }
 .wrap {
     width: 250px;
+    height: 400px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     margin: 0 10px 10px 0;
     padding: 0 30px;
@@ -17,10 +19,14 @@
     font-size: 18px;
     font-weight: 600;
 }
-.img {
-    object-fit: contain;
+.parentImg {
     margin: 0 auto;
     width: 190px;
+    height: 200px;
+
+}
+.img {
+    object-fit: contain;
 }
 .rating {
     font-size: 18px;
@@ -31,7 +37,7 @@
 
 }
 .btn {
-    width: 85px;
+    width: 95px;
     height: 39px;
     font-size: 18px;    
     border: none;
@@ -40,4 +46,14 @@
     cursor: pointer;
     margin: 0 auto;
     margin-top: 15px;
+}
+.clear {
+    width: 85px;
+    height: 39px;
+    font-size: 18px;    
+    border: none;
+    background-color: rgb(188, 188, 188);
+    border-radius: 4px;
+    cursor: pointer;
+   margin-bottom: 25px;
 }

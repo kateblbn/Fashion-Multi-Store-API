@@ -2,15 +2,18 @@ import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import net from '../css/netside.module.css'
 import { ContextCategories } from '../api/ContextApi'
-// localStorage.clear()
 
 function TemplateNetSide({ id, img, price, title, rating }) {
     console.log(id);
     return (
         <div className={net.wrap}>
-            <p className={net.title}>{title}</p>
+            <h2 className={net.title}>{title}</h2>
+            <div className={net.parentImg}>
             <img className={net.img} src={img} alt='img' />
+            </div>
+            <div>
             <p className={net.rating} >{rating}</p>
+            </div>
             <p className={net.price} >{price}$</p>
             <button onClick={() => {
                 const addProducts = JSON.parse(localStorage.getItem('item')) || [];
@@ -20,11 +23,15 @@ function TemplateNetSide({ id, img, price, title, rating }) {
                     img: img,
                     rating: rating,
                     price: price,
+                    total: price,
                     quantity: 1
                 })
+                if (addProducts.push()) {
+                    alert('added')
+                }
                 localStorage.setItem('item', JSON.stringify(addProducts))
             }
-            } className={net.btn}>ADD</button>
+            } className={net.btn}>BUY</button>
         </div>
     )
 }
