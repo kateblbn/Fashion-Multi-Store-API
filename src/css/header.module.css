@@ -1,10 +1,10 @@
 .home {
     font-size: 22px;
     color: rgb(94, 93, 93);
+}
 
-    &:hover {
-        border-top: 1px solid rgb(90, 89, 89);
-    }
+.home:hover {
+    border-top: 1px solid rgb(90, 89, 89);
 }
 
 .nav__menu {
@@ -19,7 +19,6 @@
     background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
 }
 
 .container {
@@ -36,6 +35,7 @@
 .category {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     height: 20px;
     align-items: center;
 }
@@ -43,10 +43,10 @@
 .category__items {
     margin-right: 15px;
     font-size: 22px;
+}
 
-    &:hover {
-        border-top: 1px solid rgb(90, 89, 89);
-    }
+.category__items:hover {
+    border-top: 1px solid rgb(90, 89, 89);
 }
 
 .title {
@@ -54,18 +54,72 @@
     justify-content: center;
     padding: 40px 0 70px 0;
     font-size: 60px;
-    text-shadow: 2px 2px grey;
+    font-weight: 600;
+    text-shadow: 2px 2px rgb(21, 72, 239);
+}
+
+.link {
+    font-size: 31px;
+    font-weight: 400;
 }
 
 .descr {
     width: 500px;
     font-size: 50px;
+    font-weight: 400;
     text-align: center;
     margin: 0 auto;
-    text-shadow: 4px 4px grey;
+    text-shadow: 3px 2px rgb(172, 191, 222);
 }
 
 .bucket {
     width: 40px;
     margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        justify-content: space-between;
+    }
+
+    .link {
+        font-size: 25px;
+    }
+
+    .title {
+        font-size: 49px;
+        font-weight: 500;
+        padding: 9px 0 9px 0;
+    }
+
+    .descr {
+        width: 300px;
+        font-size: 28px;
+    }
+
+    .home {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .link {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 37px;
+        font-weight: 400;
+    }
+
+    .descr {
+        width: 175px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 345px) {
+    .title {
+        padding-top: 16px;
+    }
 }

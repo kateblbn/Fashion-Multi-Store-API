@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    flex-wrap: wrap;
 }
 .wrapper {
     width: 100%;
@@ -45,4 +46,35 @@
 }
 .flex {
     display: flex;
+}
+.mrg {
+    margin-left: 40px;
+}
+
+@media (max-width: 991px) {}
+@media (max-width: 768px) {
+    .flex {
+        justify-content: space-between;
+    }
+    .total {
+        margin-right: 25px;
+    }
+}
+@media (max-width: 575px) {
+    .container {
+        justify-content: center;
+    }
+    .total {
+        font-size: 22px;
+    }
+}
+@media (max-width: 345px) {
+    .mrg {
+        margin-left: 5px;
+        margin-top: 25px;
+    }
+    .total {
+        margin-right: 5px;
+        font-size: 21px;
+    }
 }

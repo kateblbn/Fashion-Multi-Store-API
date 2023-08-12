@@ -7,7 +7,7 @@ import { ContextCategories } from '../api/ContextApi';
 function Template({ id }) {
     return (
         <div className={header.category__items}>
-            <Link to={`/category/${id}`}>{id}</Link>
+            <Link className={header.link} to={`/category/${id}`}>{id}</Link>
         </div>
     )
 }

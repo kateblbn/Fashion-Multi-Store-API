@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
+
 .wrap {
     width: 250px;
-    height: 400px;
+    height: 430px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -15,31 +17,79 @@
     padding: 0 30px;
     padding-bottom: 10px;
 }
+
 .title {
     font-size: 18px;
     font-weight: 600;
+    height: 7rem;
 }
+
 .parentImg {
     margin: 0 auto;
     width: 190px;
     height: 200px;
 
 }
+
 .img {
     object-fit: contain;
 }
+
 .rating {
-    font-size: 18px;
+    font-size: 16px;
+    margin-left: 2px;
 }
+
+.flexRating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapRating {
+    display: inline-block;
+    position: relative;
+    width: 105px;
+
+}
+
+.outerStar::before,
+.innerStar::before {
+    content: '\f005 \f005 \f005 \f005 \f005';
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    font-size: 18px;
+
+}
+
+.outerStar {
+    &::before {
+        color: #dcd9d9;
+    }
+}
+
+.innerStar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0%;
+
+    &::before {
+        color: #8481c7;
+    }
+}
+
 .price {
     font-size: 24px;
     font-weight: 700;
 
 }
+
 .btn {
     width: 95px;
     height: 39px;
-    font-size: 18px;    
+    font-size: 18px;
     border: none;
     background-color: rgb(188, 188, 188);
     border-radius: 4px;
@@ -47,13 +97,25 @@
     margin: 0 auto;
     margin-top: 15px;
 }
+
 .clear {
     width: 85px;
     height: 39px;
-    font-size: 18px;    
+    font-size: 18px;
     border: none;
     background-color: rgb(188, 188, 188);
     border-radius: 4px;
     cursor: pointer;
-   margin-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 575px) {
+    .clear, .btn {
+        height: 30px;
+        font-size: 16px;
+    }
+    .title {
+        font-size: 16px;
+        height: 5rem;
+    }
 }

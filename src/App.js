@@ -9,7 +9,8 @@ import Header from "./components/Header";
 import NetSide from "./components/NetSide";
 import ShopCard from "./pages/ShopCard";
 import Home from "./pages/Home";
-import ContextApi, { ContextCategories } from "./api/ContextApi";
+import ContextApi from "./api/ContextApi";
+
 
 
 function App() {
