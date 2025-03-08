@@ -17,7 +17,7 @@ function EmptyCart() {
                 select products or <br /> Find what
                 you need in the catalog</p>
             </div>
-            <Link to={'/'} className={cart.btn}>GO TO HOME</Link>
+            <Link to={'https://kateblbn.github.io/Fashion-Multi-Store-API/'} className={cart.btn}>GO TO HOME</Link>
           </div>
         )
       }
