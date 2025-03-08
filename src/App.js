@@ -19,9 +19,9 @@ function App() {
     <ContextApi>
     <Header/>
       <Routes>
-        <Route path="/" element={ <Home/>} />
-        <Route path="/category/:category" element={ <NetSide/> } />
-        <Route path="/shopping-card" element={<ShopCard/> } />
+        <Route path="https://kateblbn.github.io//" element={ <Home/>} />
+        <Route path="https://kateblbn.github.io//category/:category" element={ <NetSide/> } />
+        <Route path="https://kateblbn.github.io//shopping-card" element={<ShopCard/> } />
       </Routes>
       </ContextApi>
     </BrowserRouter>
