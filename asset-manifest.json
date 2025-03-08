@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Fashion-Multi-Store-API/static/css/main.4c2c1036.css",
+    "main.js": "/Fashion-Multi-Store-API/static/js/main.aea3d092.js",
+    "static/media/background.jpg": "/Fashion-Multi-Store-API/static/media/background.9bf4352edf7b237701fa.jpg",
+    "static/media/bag.png": "/Fashion-Multi-Store-API/static/media/bag.413f15c3e0e952d615f2.png",
+    "index.html": "/Fashion-Multi-Store-API/index.html",
+    "main.4c2c1036.css.map": "/Fashion-Multi-Store-API/static/css/main.4c2c1036.css.map",
+    "main.aea3d092.js.map": "/Fashion-Multi-Store-API/static/js/main.aea3d092.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c2c1036.css",
+    "static/js/main.aea3d092.js"
+  ]
+}
